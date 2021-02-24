@@ -30,7 +30,7 @@ prueba
 
 5. se modifico el controlador para que ahora, acepte peticiones GET al recurso /blueprints/{author} 
 
-![Prueba](./img/media/11.PNG) 
+![Prueba](./img/media/11.png) 
 
 prueba
 
@@ -38,7 +38,7 @@ prueba
 
 6. se modifico el controlador para que ahora, acepte peticiones GET al recurso /blueprints/{author}/{bpname}
 
-![Prueba](./img/media/12.PNG) 
+![Prueba](./img/media/12.png) 
 
 prueba
 
@@ -48,7 +48,7 @@ prueba
 
 1.2. se modifico el manejo de peticiones POST (creación de nuevos planos), de manera que un cliente http pueda registrar una nueva orden haciendo una petición POST al recurso ‘planos’, y enviando como contenido de la petición todo el detalle de dicho recurso a través de un documento jSON.
 
-![Prueba](./img/media/13.PNG) 
+![Prueba](./img/media/13.png) 
 
 prueba
 
@@ -64,7 +64,7 @@ resultado
 
 3. se modifico el soporte al verbo PUT para los recursos de la forma '/blueprints/{author}/{bpname}', de manera que sea posible actualizar un plano determinado.
 
-![Prueba](./img/media/14.PNG) 
+![Prueba](./img/media/14.png) 
 
 prueba
 
