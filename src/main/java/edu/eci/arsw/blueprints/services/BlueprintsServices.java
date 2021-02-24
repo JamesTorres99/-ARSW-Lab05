@@ -62,5 +62,10 @@ public class BlueprintsServices {
     public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException{
     	return bpp.getBlueprintsByAuthor(author);
     }
+
+	public void setModif(String author, String bpname, Blueprint bp) throws BlueprintNotFoundException {
+		bpp.setModif(author, bpname,  bp);
+		
+	}	
     
 }

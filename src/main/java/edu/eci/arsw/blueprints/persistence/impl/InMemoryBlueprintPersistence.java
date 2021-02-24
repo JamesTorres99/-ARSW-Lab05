@@ -26,7 +26,7 @@ import org.springframework.stereotype.Service;
 @Service("Memory")
 public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
 
-    private final Map<Tuple<String,String>,Blueprint> blueprints=new HashMap<>();
+    private final ConcurrentHashMap<Tuple<String,String>,Blueprint> blueprints=new ConcurrentHashMap<>();
 
     public InMemoryBlueprintPersistence() {
         //load stub data
@@ -84,4 +84,9 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
     	
     }
     
+    @Override
+    public void setModif(String author, String bpname, Blueprint bp) throws BlueprintNotFoundException {
+    	Blueprint blueprint = getBlueprint(author,bpname);
+        blueprint.setPuntos(bp.getPoints());
+    }
 }

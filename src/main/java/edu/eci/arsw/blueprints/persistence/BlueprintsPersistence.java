@@ -35,4 +35,6 @@ public interface BlueprintsPersistence {
     public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException;
 
 	public Set<Blueprint> getAllBlueprints();
+
+	public void setModif(String author, String bpname, Blueprint bp) throws BlueprintNotFoundException;
 }

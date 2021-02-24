@@ -64,14 +64,25 @@ public class BlueprintAPIController {
 	        }
 
 	    }
-	    @RequestMapping(value = "/create-Blueprint",method = RequestMethod.POST)
+	    @RequestMapping(value = "/createBlueprint",method = RequestMethod.POST)
 	    public ResponseEntity<?> createBlueprint(@RequestBody Blueprint bl){
 	        try {
 	            bps.addNewBlueprint(bl);
 	            return new ResponseEntity<>(HttpStatus.CREATED);
 	        } catch (BlueprintPersistenceException ex) {
 	            Logger.getLogger(BlueprintAPIController.class.getName()).log(Level.SEVERE, null, ex);
-	            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+	            return new ResponseEntity<>("Error createBlueprint",HttpStatus.FORBIDDEN);
+	        }
+	    }
+	    
+	    @RequestMapping(value = "/{author}/{bpname}",method = RequestMethod.PUT)
+	    public ResponseEntity<?> putBlueprint(@PathVariable String author,@PathVariable String bpname,@RequestBody Blueprint bp){
+	        try {
+	        	bps.setModif(author,bpname,bp);
+	            return new ResponseEntity<>(HttpStatus.CREATED);
+	        } catch (BlueprintNotFoundException ex) {
+	            Logger.getLogger(BlueprintAPIController.class.getName()).log(Level.SEVERE, null, ex);
+	            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	        }
 	    }
 }
