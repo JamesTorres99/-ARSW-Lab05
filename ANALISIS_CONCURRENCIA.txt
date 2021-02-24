@@ -1,0 +1,9 @@
+Qué condiciones de carrera se podrían presentar?
+
+Se presenta cuando se crean blueprints iguales ya que no se reconocen los elementos repetidos tambien al ingresar al tiempo se pueden interferir.
+
+Cuales son las respectivas regiones críticas?
+
+las regiones criticas estan en añadir y eliminar blueprints.
+
+Cambiamos en la clase InMemoryBlueprintPersistence el map creado de tipo tabla hash y en su lugar usamos ConcurrentHashMap el cual es una tabla hash que soporta alta concurrencia. 
