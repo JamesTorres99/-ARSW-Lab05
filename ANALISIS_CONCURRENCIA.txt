@@ -6,4 +6,5 @@ Cuales son las respectivas regiones críticas?
 
 las regiones criticas estan en añadir y eliminar blueprints.
 
+solucion a una alta concurrencia.
 Cambiamos en la clase InMemoryBlueprintPersistence el map creado de tipo tabla hash y en su lugar usamos ConcurrentHashMap el cual es una tabla hash que soporta alta concurrencia. 
