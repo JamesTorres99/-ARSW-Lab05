@@ -74,5 +74,12 @@ resultado
 
 ![app1](./img/media/7.png)
 
+### *PARTE III*
 
+Qué condiciones de carrera se podrían presentar?
 
+Se presenta cuando se crean blueprints iguales ya que no se reconocen los elementos repetidos tambien al ingresar al tiempo se pueden interferir.
+
+Cuales son las respectivas regiones críticas?
+
+las regiones criticas estan en añadir y eliminar blueprints.
